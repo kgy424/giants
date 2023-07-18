@@ -1,4 +1,4 @@
-// --------------- nav- navmenu sticky
+// --------------- nav > navmenu sticky
 
 let navbar = document.getElementById("nav");
 let sticky;
@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
 
 
 
-// section05-swiper
+// ---------------- section03 > swiper
 
 var swiper = new Swiper(".giants_photo", {
   autoplay: true,
@@ -39,7 +39,7 @@ var swiper = new Swiper(".giants_photo", {
 
 
 
-// --------------- section06
+// --------------- section04 > sticky
 let scrollBody = document.querySelector(".fix_motion"); //sticky가 되는 영역 전체
 let scrollHeight; //스크롤의 높이
 let sectionOffsetTop;
@@ -175,7 +175,71 @@ window.addEventListener("resize", () => {
 scrollFuc();
 
 
-// --------------- section07 > cube
+// --------------- section05 > tect scroll ani
+//text-scroll_ani
+
+let pTag1 = document.querySelector(".first");
+let pTag2 = document.querySelector(".second");
+
+let textArr1 =
+  "THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE THE POWER OF ONE ".split(" ");
+
+let textArr2 =
+  "EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSAN EST. 1982 BUSANEST. 1982 BUSAN EST. 1982 BUSAN ".split(" ");
+
+// let arr=[];
+// arr.push(...textArr1)
+// console.log(arr)
+
+let count1 = 0;
+let count2 = 0;
+
+initTexts(pTag1, textArr1);
+initTexts(pTag2, textArr2);
+
+function initTexts(element, textArry) {
+  textArry.push(...textArry); //8개의 배열에 동일한 배열을 복사하여 배열뒤에 넣음//16개
+  // \u00A0 -->javascript에서의 공백을 나타냄
+  //console.log(textArry)
+  for (let i = 0; i < textArry.length; i++) {
+    element.innerHTML += `${textArry[i]}\u00A0\u00A0\u00A0`;
+  }
+}
+//글자입력
+
+function animate() {
+  count1++;
+  //console.log(count1)
+  count2++;
+
+  count1 = marqueeText(count1, pTag1, -1);
+  count2 = marqueeText(count2, pTag2, 1);
+
+  window.requestAnimationFrame(animate);
+  //setInterval의 업그레이드 된 버전
+  //animate함수를 다시 실행
+}
+
+function marqueeText(count, element, direction) {
+  //.scrollWidth--> 보이지 않는 공간일지라도 스크롤해서 확인할수 있는 공간까지의 넓이 , 전체넓이
+  //console.log(element.scrollWidth)
+  if (count > element.scrollWidth / 2) {
+    count = 0;
+    element.style.transform = `translate(0,0)`;
+  }
+
+  element.style.transform = `translate(${count * direction}px,0)`;
+  return count;
+}
+function scrollHandler() {
+  count1 += 25;
+  count2 += 25;
+}
+
+animate();
+window.addEventListener("scroll", scrollHandler);
+
+// --------------- section05 > cube
 let rotationY = 0;
 let cube = document.querySelector(".box-area");
 cube.style.transform = "rotateX(0deg) rotateY(0deg)";
@@ -186,57 +250,59 @@ function rotateYAxis(n) {
   cube.style.transform = `rotateX(0deg) rotateY(${-rotationY}deg)`
 };
 
-// section05 > move ball
+// -------------- section05 > move ball
 let allText = document.querySelectorAll(".ballImg");
 let delay = 0;
 
 // allText.forEach((el,idx)=>{}) -> el 각각의 아이템 idx는 아이템의 index번호
 
 allText.forEach((el, idx) => {
-    el.style.animationDelay = `${delay}s`;
-    el.style.zIndex = allText.length - idx;
-    el.classList.add("base-ani");
+  el.style.animationDelay = `${delay}s`;
+  el.style.zIndex = allText.length - idx;
+  el.classList.add("base-ani");
 
-    delay += .15;
+  delay += .15;
 })
 document.getElementById("section05").addEventListener("mousemove", (e) => {
-    let innerWidth = window.innerWidth; //viewport(지금 보고있는 화면)의 넯이값
-    let innerheight = window.innerHeight; //viewport(지금 보고있는 화면)의 높이값
+  let innerWidth = window.innerWidth; //viewport(지금 보고있는 화면)의 넯이값
+  let innerheight = window.innerHeight; //viewport(지금 보고있는 화면)의 높이값
 
-    let clientX = e.clientX;
-    let clientY = e.clientY;
-    // console.log(clientX,clientY)
+  let clientX = e.clientX;
+  let clientY = e.clientY;
+  // console.log(clientX,clientY)
 
-    let percentX=clientX/innerWidth;
-    //console.log(percentX)
-    let maxRangeX=innerWidth*0.15;
-    let minX=innerWidth/2 - maxRangeX;
-    let maxX=innerWidth/2 + maxRangeX;
-    let difX=  maxX - minX;
-    let pxOffset = difX * percentX;
+  let percentX = clientX / innerWidth;
+  //console.log(percentX)
+  let maxRangeX = innerWidth * 0.15;
+  let minX = innerWidth / 2 - maxRangeX;
+  let maxX = innerWidth / 2 + maxRangeX;
+  let difX = maxX - minX;
+  let pxOffset = difX * percentX;
 
-    let left=minX + pxOffset;
+  let left = minX + pxOffset;
 
-    let percentY=clientY/innerHeight;
-    //console.log(percentX)
-    let maxRangeY=innerHeight*0.15;
-    let minY=innerHeight/2 - maxRangeY;
-    let maxY=innerHeight/2 + maxRangeY;
-    let difY=  maxY - minY;
-    let pxOffsetY = difY * percentY;
+  let percentY = clientY / innerHeight;
+  //console.log(percentX)
+  let maxRangeY = innerHeight * 0.15;
+  let minY = innerHeight / 2 - maxRangeY;
+  let maxY = innerHeight / 2 + maxRangeY;
+  let difY = maxY - minY;
+  let pxOffsetY = difY * percentY;
 
-    let top=minY + pxOffsetY;
+  let top = minY + pxOffsetY;
 
-    allText.forEach((el,idx)=>{
-        //el.animate([],{})
+  allText.forEach((el, idx) => {
+    //el.animate([],{})
 
-        el.animate([
-            {top:`${top}px`,left:`${left}px`}
-        ],{
-            duration:1000,fill:'forwards',delay:idx * 50
-        })
+    el.animate([{
+      top: `${top}px`,
+      left: `${left}px`
+    }], {
+      duration: 1000,
+      fill: 'forwards',
+      delay: idx * 50
     })
-
+  })
 })
 
 // ----------------- scrollUp
@@ -250,7 +316,7 @@ let scrollup = () => {
 
 window.addEventListener("scroll", scrollup)
 
-// --------------Load
+// -------------- progress
 let container = document.querySelector('#progress');
 let progressText = document.querySelector('.progress-text');
 let imgLoad = imagesLoaded('body');
@@ -262,13 +328,9 @@ let topValue;
 
 progressTimer = setInterval(updateProgess, 1000 / 60);
 
-
-
-
 imgLoad.on('progress', function (instance, image) {
   imgLoaded++;
 });
-
 
 function updateProgess() {
   let target = (imgLoaded / imgTotal) * 100;
@@ -287,12 +349,9 @@ function updateProgess() {
       container.style.top = -topValue + "%";
     }, 10)
   }
-
-
 }
 
-
-// ------------splitting
+// ------------ splitting > text animation
 let section = document.querySelector("#section01, #section02, #section03, #section05")
 let sliding_h4 = document.querySelector(".sliding_text h4")
 let sliding_em = document.querySelector(".sliding_text em")
@@ -303,9 +362,7 @@ let weekly_h2 = document.querySelectorAll(".weekly_player_tit")
 let giants_h1 = document.querySelectorAll(".giants_photo h1")
 let ect_Lh2 = document.querySelectorAll(".ect_Lh2")
 let ect_Rh2 = document.querySelectorAll(".ect_Rh2")
-let onenter=false;
-
-// 이런식으로 넣으면 잼 https://splitting.js.org/
+let onenter = false;
 
 const initHero = () => {
   gsap.set(sliding_h4, {
@@ -402,28 +459,22 @@ const showHero = () => {
   })
   tl.to(ect_Lh2, {
     x: 0,
-     duration: .5,
+    duration: .5,
     ease: "power3.in",
   })
   tl.to(ect_Rh2, {
     x: 0,
-     duration: .5,
+    duration: .5,
     ease: "power3.in",
   })
-
-
 };
 
 window.onload = () => {
-
   window.addEventListener('scroll', () => {
-    if (!onenter &&  pageYOffset > section.offsetTop - 50) {
+    if (!onenter && pageYOffset > section.offsetTop - 50) {
       initHero();
       // console.log(section.offsetTop)
-      onenter=true;
+      onenter = true;
     }
-
   })
-
-
 }

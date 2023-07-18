@@ -10,7 +10,7 @@
   <!-- Giants Font -->
   <link rel="stylesheet" href="css/font/stylesheet.css">
   <!-- fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
   <!-- splitting -->
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
@@ -22,11 +22,6 @@
 
 <body>
   <section class="scroll-section" id="scroll-section">
-    <!-- canvas이미지 만들기 -->
-    <!-- <iframe src="img/page_music.mp3" frameborder="0" controls autoplay class="audio"></iframe> -->
-    <!-- <audio controls autoplay>
-      <source src="img/page_music.mp3"  type="audio/mp3">
-    </audio>  -->
 
     <div class="sticky-elem sticky-elem-canvas">
       <canvas id="video-canvas" width="1920" height="1080"></canvas>
@@ -341,95 +336,108 @@
       </div>
     </section><!-- section04 -->
 
-    <section id="section05">
-      <div class="etc clearfix">
-        
-        <div class="img_wrap">
-          <span class="ballImg base-ani">
+    <div class="main">
+      <div class="cover cover01">
+        <div class="first"></div>
+      </div>
+
+      <section id="section05">
+        <div class="etc clearfix">
+
+          <div class="img_wrap">
+            <span class="ballImg base-ani">
               <img src="img/section05_ball01.png" alt="baseball">
-          </span>
-          <span class="ballImg shadow-ani">
+            </span>
+            <span class="ballImg shadow-ani">
               <img src="img/section05_ball02.png" alt="shadow ball">
-          </span>
-          <span class="ballImg shadow-ani">
+            </span>
+            <span class="ballImg shadow-ani">
               <img src="img/section05_ball02.png" alt="shadow ball">
-          </span>
-          <span class="ballImg shadow-ani">
+            </span>
+            <span class="ballImg shadow-ani">
               <img src="img/section05_ball02.png" alt="shadow ball">
-          </span>
-          <span class="ballImg shadow-ani">
+            </span>
+            <span class="ballImg shadow-ani">
               <img src="img/section05_ball02.png" alt="shadow ball">
-          </span>
-          <span class="ballImg shadow-ani">
+            </span>
+            <span class="ballImg shadow-ani">
               <img src="img/section05_ball02.png" alt="shadow ball">
-          </span>
-          <span class="ballImg shadow-ani">
+            </span>
+            <span class="ballImg shadow-ani">
               <img src="img/section05_ball02.png" alt="shadow ball">
-          </span>
-          <span class="ballImg shadow-ani">
+            </span>
+            <span class="ballImg shadow-ani">
               <img src="img/section05_ball02.png" alt="shadow ball">
-          </span>
+            </span>
 
-      </div><!-- img_wrap -->
+          </div><!-- img_wrap -->
 
-        <div class="etc_L">
-          <div class="cube_wrap">
+          <div class="etc_L">
             <h2 class="ect_Lh2">UNIFORMS</h2>
-            <div class="box-area">
-              <div class="box box-front">
-                <img src="img/section05_uniform03.png" alt="오둥이 콜라보 어센틱 유니폼">
-              </div>
-              <div class="box box-right">
-                <img src="img/section05_uniform01.png" alt="홈 올드어센틱 유니폼">
-              </div>
-              <div class="box box-back">
-                <img src="img/section05_uniform02.png" alt="원정 어센틱 유니폼">
-              </div>
-              <div class="box box-left">
-                <img src="img/section05_uniform04.png" alt="드림 어센틱 유니폼">
-              </div>
-            </div><!-- box-area -->
+            <div class="cube_wrap">
+              <div class="box-area">
+                <div class="box box-front">
+                  <img src="img/section05_uniform03.png" alt="오둥이 콜라보 어센틱 유니폼">
+                </div>
+                <div class="box box-right">
+                  <img src="img/section05_uniform01.png" alt="홈 올드어센틱 유니폼">
+                </div>
+                <div class="box box-back">
+                  <img src="img/section05_uniform02.png" alt="원정 어센틱 유니폼">
+                </div>
+                <div class="box box-left">
+                  <img src="img/section05_uniform04.png" alt="드림 어센틱 유니폼">
+                </div>
+              </div><!-- box-area -->
 
-            <div class="rotate-button">
-              <button class="rotate-bottom" onclick="rotateYAxis(-1)">
-                <i class="fas fa-caret-left"></i>
-              </button>
-              <button class="rotate-top" onclick="rotateYAxis(1)">
-                <i class="fas fa-caret-right"></i>
-              </button>
-            </div>
-          </div><!-- area -->
-        </div><!-- etc_L -->
+              <div class="rotate-button">
+                <button class="rotate-bottom" onclick="rotateYAxis(-1)">
+                  <i class="fas fa-caret-left"></i>
+                </button>
+                <button class="rotate-top" onclick="rotateYAxis(1)">
+                  <i class="fas fa-caret-right"></i>
+                </button>
+              </div>
+            </div><!-- area -->
+          </div><!-- etc_L -->
 
-        <div class="etc_R">
-          <div class="lego_wrap">
+          <div class="etc_R">
             <h2 class="ect_Rh2">INFO</h2>
-            <a href="https://ticket.giantsclub.com/loginForm.do" class="ticket">
-              <h3>티켓예매처</h3>
-              <p>바로가기!</p>
-              <p class="ticket_desc">롯데 자이언츠 티켓예매시스템으로 이동합니다.<br>모바일버전은 각 OS별 스토어에서 '롯데자이언츠 모바일 엡' 검색 후 다운로드 하실 수 있습니다.
-              </p>
-            </a>
+            <div class="lego_wrap">
+              <a href="https://ticket.giantsclub.com/loginForm.do" class="ticket">
+                <h3>티켓예매처</h3>
+                <p>바로가기!</p>
+                <p class="ticket_desc">롯데 자이언츠 티켓예매시스템으로 이동합니다.<br>모바일버전은 각 OS별 스토어에서 '롯데자이언츠 모바일 엡' 검색 후 다운로드 하실 수
+                  있습니다.
+                </p>
+              </a>
 
-            <a href="http://www.lottegiantsshop.com/" class="online">
-            </a>
+              <a href="http://www.lottegiantsshop.com/" class="online">
+              </a>
 
-            <a href="https://www.youtube.com/channel/UCAZQZdSY5_YrziMPqXi-Zfw" class="youtube">
-              <div class="arrow1">
-                <i class="far fa-arrow-alt-circle-right"></i>
-              </div>
-            </a>
+              <a href="https://www.youtube.com/channel/UCAZQZdSY5_YrziMPqXi-Zfw" class="youtube">
+                <div class="arrow1">
+                  <i class="far fa-arrow-alt-circle-right"></i>
+                </div>
+              </a>
 
-            <a href="https://www.instagram.com/busanlottegiants/" class="instagram">
-              <div class="arrow2">
-                <i class="far fa-arrow-alt-circle-right"></i>
-              </div>
-            </a>
+              <a href="https://www.instagram.com/busanlottegiants/" class="instagram">
+                <div class="arrow2">
+                  <i class="far fa-arrow-alt-circle-right"></i>
+                </div>
+              </a>
 
-          </div><!-- lego_wrap -->
-        </div><!-- etc_R -->
-      </div><!-- etc -->
-    </section><!-- section05 -->
+            </div><!-- lego_wrap -->
+          </div><!-- etc_R -->
+
+        </div><!-- etc -->
+      </section><!-- section05 -->
+
+      <div class="cover cover02">
+        <div class="second"></div>
+      </div>
+
+    </div>
   </main>
 
   <footer id="footer">
@@ -508,10 +516,7 @@
   <script src="js/main.js"></script>
 
   <script>
-   // Splitting();
-    // AOS.init({
-    //   once: false
-    // });
+    Splitting();
   </script>
 
   <script type="text/javascript">

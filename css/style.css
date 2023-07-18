@@ -46,14 +46,6 @@
   z-index: -1;
 }
 
-.audio {
-  position: sticky;
-  background-color: yellow;
-  z-index: 1;
-  top: 3rem;
-  left: 4rem;
-}
-
 .main-message {
   color: #fff;
   display: flex;
@@ -157,7 +149,7 @@ nav .menu_tit .logo img {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .nav .menu_tit .tit ul {
@@ -710,45 +702,63 @@ nav .menu_tit .logo img {
 /* etc */
 
 .etc {
-  border-top: 2px solid #000;
-  height: 900px;
+  height: 95vh;
   overflow: hidden;
   background-color: #46b1ff;
   position: relative;
 }
 
-.etc .etc_L {
-  position: relative;
-  float: left;
-  width: 55%;
-  height: 100%;
-  z-index: 100;
-}
-
+.etc .etc_L,
 .etc .etc_R {
   position: relative;
   float: left;
-  width: 45%;
-  height: 100%;
+  height: 80%;
   z-index: 100;
+  /* padding-top: 10vh; */
 }
 
-.ballImg {
+.etc .etc_L {
+  width: 55%;
+}
+
+.etc .etc_R {
+  width: 45%;
+}
+.main{
+  overflow: hidden;
+}
+.cover {
+  font-family: 'Giants_bold';
+  display: flex;
+  padding: 1rem 0;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #ab0419;
+  margin-left: -2%;
+}
+.cover01{}
+.cover02 {
+  justify-content: flex-end;
+  margin-left: -20%;
+}
+
+.etc .img_wrap .ballImg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   rotate: -15deg;
-
 }
-.shadow-ani{
+
+.etc .img_wrap .base-ani {
+  animation: up_down 2.5s ease-in-out infinite alternate, rotate 5s ease-in-out infinite alternate;
+}
+
+.etc .img_wrap .shadow-ani {
   filter: invert(100%);
   opacity: .7;
 }
 
-.base-ani {
-  animation: up_down 2.5s ease-in-out infinite alternate, rotate 5s ease-in-out infinite alternate;
-}
 
 @keyframes up_down {
   0% {
@@ -772,7 +782,7 @@ nav .menu_tit .logo img {
 
 .etc_L .cube_wrap {
   position: absolute;
-  top: 30%;
+  top: 70%;
   left: 55%;
   transform: translate(-50%, -50%);
   width: 400px;
@@ -780,11 +790,12 @@ nav .menu_tit .logo img {
   perspective: 800px;
 }
 
-.etc_L .cube_wrap h2 {
+.etc_L h2 {
   text-align: center;
   font-size: 3.5rem;
   font-family: "Giants_inline";
-  padding-bottom: 4rem;
+  padding-top: 8rem;
+  padding-left: 4rem;
 }
 
 .etc_L .cube_wrap .box-area {
@@ -840,8 +851,8 @@ nav .menu_tit .logo img {
 
 .etc_L .cube_wrap .rotate-button {
   position: absolute;
-  top: 100%;
-  left: 50%;
+  top: 55%;
+    left: 52%;
   transform: translate(-50%, -50%);
   width: 690px;
   display: flex;
@@ -861,16 +872,16 @@ nav .menu_tit .logo img {
 
 .etc_R .lego_wrap {
   position: relative;
-  left: 13%;
-  top: 10%;
+  left: 15%;
+  top: 5%;
   height: 100%;
 }
 
-.etc_R .lego_wrap h2 {
+.etc_R h2 {
   font-size: 3.5rem;
   font-family: "Giants_inline";
-  padding-bottom: 4rem;
-  padding-left: 11rem;
+  text-align: center;
+  padding-top: 8rem;
 }
 
 .etc_R .lego_wrap .ticket {
@@ -1054,6 +1065,7 @@ nav .menu_tit .logo img {
   left: 0;
   top: 0;
   transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  z-index: 10000;
 }
 
 .progress .progress-text {
