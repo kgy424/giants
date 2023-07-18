@@ -739,6 +739,11 @@ nav .menu_tit .logo img {
   left: 50%;
   transform: translate(-50%, -50%);
   rotate: -15deg;
+
+}
+.shadow-ani{
+  filter: invert(100%);
+  opacity: .7;
 }
 
 .base-ani {
