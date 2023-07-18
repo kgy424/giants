@@ -390,7 +390,7 @@ const initHero = () => {
   });
 
   gsap.set(giants_h1, {
-    y: '-90%',
+    y: '-120%',
   });
   gsap.set(ect_Lh2, {
     x: '-185%',

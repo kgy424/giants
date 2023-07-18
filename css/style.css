@@ -1065,11 +1065,7 @@ nav .menu_tit .logo img {
   left: 0;
   top: 0;
   transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-<<<<<<< HEAD
   z-index: 10000;
-=======
-  z-index:10000;
->>>>>>> e772159c6fa4393471c6277407a1bce5b746d174
 }
 
 .progress .progress-text {
