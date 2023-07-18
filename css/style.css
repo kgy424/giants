@@ -157,7 +157,7 @@ nav .menu_tit .logo img {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .nav .menu_tit .tit ul {
@@ -1054,6 +1054,7 @@ nav .menu_tit .logo img {
   left: 0;
   top: 0;
   transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  z-index:10000;
 }
 
 .progress .progress-text {
