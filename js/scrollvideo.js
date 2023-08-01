@@ -41,7 +41,7 @@
 
     //canvas  크기조절
     //   const heightRatio=window.innerHeight/1080;
-    const heightRatio = window.innerHeight / 945;
+    const heightRatio = window.innerHeight / 900;
     // console.log(heightRatio)
     sceneInfo[0].objs.canvas.style.transform = `translate3d(-50%, -50%,0) scale(${heightRatio})`;
   } /* //setLayout */
