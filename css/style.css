@@ -2,17 +2,6 @@
 @import url(reset.css);
 /* Giants_bold  Giants_reg  Giants_inline  */
 
-/* Layout */
-
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.pad {
-  /* padding: 0 24px; */
-}
 
 #nav {
   background-color: #022344;
@@ -20,7 +9,11 @@
 
 #section01 {}
 
-#section02 {}
+#section02 {
+  background-color: #f3f3f3;
+  overflow: hidden;
+  border-top: 2px solid #000 ;
+}
 
 #section03 {
   position: relative;
@@ -315,15 +308,13 @@ nav .menu_tit .logo img {
 }
 
 /* section02 */
-.weekly_player {
-  background-color: #f3f3f3;
-  overflow: hidden;
-  position: relative;
-  border-top: 2px solid #000;
+.player_wrap {
+  width: 1200px;
+  margin: 0 auto;
 }
 
-.weekly_player .container {
-  border: none;
+.weekly_player {
+  position: relative;
 }
 
 .weekly_player .weekly_player_tit {
@@ -438,7 +429,7 @@ nav .menu_tit .logo img {
 .player_text_ani_L {
   display: flex;
   position: absolute;
-  left: 11%;
+  left: -7rem;
   top: 0;
   transform: rotate(90deg);
   transform-origin: left top;
@@ -448,7 +439,7 @@ nav .menu_tit .logo img {
 .player_text_ani_R {
   display: flex;
   position: absolute;
-  left: 97%;
+  left: 90rem;
   top: 0;
   transform: rotate(90deg);
   transform-origin: left top;
@@ -724,9 +715,11 @@ nav .menu_tit .logo img {
 .etc .etc_R {
   width: 45%;
 }
-.main{
+
+.main {
   overflow: hidden;
 }
+
 .cover {
   font-family: 'Giants_bold';
   display: flex;
@@ -736,7 +729,9 @@ nav .menu_tit .logo img {
   color: #ab0419;
   margin-left: -2%;
 }
-.cover01{}
+
+.cover01 {}
+
 .cover02 {
   justify-content: flex-end;
   margin-left: -20%;
@@ -852,7 +847,7 @@ nav .menu_tit .logo img {
 .etc_L .cube_wrap .rotate-button {
   position: absolute;
   top: 55%;
-    left: 52%;
+  left: 52%;
   transform: translate(-50%, -50%);
   width: 690px;
   display: flex;
@@ -1166,18 +1161,3 @@ nav .menu_tit .logo img {
 .no-flexboxlegacy .ie {
   display: block;
 }
-
-
-/* 🧙‍♀️ Media Query 🧙‍♂️ */
-
-@media (max-width: 1024px) {}
-
-@media (max-width: 960px) {}
-
-@media (max-width: 768px) {}
-
-@media (max-width: 600px) {}
-
-@media (max-width: 480px) {}
-
-@media (max-width: 320px) {}
